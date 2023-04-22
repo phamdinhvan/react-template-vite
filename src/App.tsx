@@ -1,8 +1,8 @@
 import Hello from '@/components/Hello';
 import '../i18n';
 
-function App() {
+const MainApp = () => {
   return <Hello />;
-}
+};
 
-export default App;
+export default MainApp;

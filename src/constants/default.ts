@@ -1,0 +1,9 @@
+export const TEXT_HOLDER = '--';
+export const DEFAULT_SIZE: [number, number] = [24, 22];
+export const DEFAULT_ICON_COLOR = '#6C778D';
+export const DEFAULT_ICON_ACTIVE_COLOR = '#FFFFFF';
+export const DEFAULT_ERROR_MESSAGE = 'Vui lòng nhập thông tin này';
+export const DEFAULT_EMAIL_ERROR_MESSAGE = 'Vui lòng nhập email đúng dạng';
+export const PAGE_LIMIT = 25;
+export const SEARCH_TIMEOUT = 500;
+export const API_URL = 'https://example.com';

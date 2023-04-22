@@ -1,0 +1,40 @@
+$second-color-light: #10bed2;
+
+.MuiCalendarPicker-root {
+  .MuiPickersCalendarHeader-root {
+    .MuiPickersCalendarHeader-label {
+      @apply tw-et-text-label-14;
+      text-transform: capitalize;
+    }
+  }
+
+  .MuiPickersDay-root {
+    font-size: 12px !important;
+    &:active {
+      background: $second-color-light;
+      color: #fff;
+    }
+  }
+  .MuiPickersDay-root.Mui-selected {
+    background: $second-color-light;
+  }
+
+  .Mui-selected {
+    font-size: 12px !important;
+    background: $second-color-light !important;
+  }
+  button {
+    font-size: 12px !important;
+  }
+}
+
+.date-picker {
+  .MuiOutlinedInput-root {
+    height: 48px !important;
+    @apply tw-et-text-paragraph-14;
+  }
+  .MuiSvgIcon-root {
+    font-size: 3rem;
+    color: $second-color-light;
+  }
+}

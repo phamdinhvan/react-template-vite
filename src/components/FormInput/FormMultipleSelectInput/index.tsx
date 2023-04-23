@@ -28,7 +28,7 @@ type P_Props<T extends FieldValues> = {
   defaultValue?: FieldValues | Options;
 };
 
-const SelectInputMultiple = <TFieldValues extends FieldValues = FieldValues>({
+const FormMultipleSelectInput = <TFieldValues extends FieldValues = FieldValues>({
   options,
   onSearch,
   name,
@@ -80,6 +80,7 @@ const SelectInputMultiple = <TFieldValues extends FieldValues = FieldValues>({
                   fullWidth
                   InputProps={{
                     startAdornment: (
+                      //TODO Enhance icon component
                       <InputAdornment position='start'>{/*Icon search */}</InputAdornment>
                     ),
                   }}
@@ -148,4 +149,4 @@ const SelectInputMultiple = <TFieldValues extends FieldValues = FieldValues>({
   );
 };
 
-export default React.memo(SelectInputMultiple);
+export default React.memo(FormMultipleSelectInput);

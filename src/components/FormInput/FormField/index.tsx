@@ -111,6 +111,7 @@ export default function FormField<TFieldValues extends FieldValues = FieldValues
 
   const defaultStartAdornment = () => {
     if (typeInput === 'password')
+      //TODO Enhance icon component
       return <InputAdornment position='start'>{/*icon */}</InputAdornment>;
     return null;
   };
@@ -199,6 +200,7 @@ export default function FormField<TFieldValues extends FieldValues = FieldValues
                           e.preventDefault();
                         }}
                       >
+                        {/*//TODO Enhance icon component*/}
                         {/*icon */}
                       </a>
                     </div>

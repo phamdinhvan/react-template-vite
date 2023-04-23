@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import { FieldValues } from 'react-hook-form/dist/types/fields';
 
-export type FormSelectInputMultipleProps<T extends FieldValues> = Omit<SelectProps, 'value'> & {
+export type FormMultipleSelectProps<T extends FieldValues> = Omit<SelectProps, 'value'> & {
   options: { id: string | number; label: string }[] | any[];
   label?: string;
   itemKey?: string;
@@ -38,7 +38,7 @@ export type FormSelectInputMultipleProps<T extends FieldValues> = Omit<SelectPro
 const ITEM_HEIGHT = 40;
 const ITEM_PADDING_TOP = 8;
 
-export default function FormSelectInputMultiple<TFieldValues extends FieldValues>({
+export default function FormMultipleSelect<TFieldValues extends FieldValues>({
   options,
   label = '',
   itemKey = 'id',
@@ -56,7 +56,7 @@ export default function FormSelectInputMultiple<TFieldValues extends FieldValues
   showCheckbox,
   formControlProps,
   ...rest
-}: FormSelectInputMultipleProps<TFieldValues>): JSX.Element {
+}: FormMultipleSelectProps<TFieldValues>): JSX.Element {
   if (required && !validation.required) {
     validation.required = 'This field is required';
   }

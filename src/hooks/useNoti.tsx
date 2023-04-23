@@ -1,25 +1,22 @@
-import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const useNoti = () => {
-  const pushNoti = (
-    notiType: 'error' | 'success' | 'warning' | 'info',
-    message: string
-  ): void => {
+  const pushNoti = (notiType: 'error' | 'success' | 'warning' | 'info', message: string): void => {
     const renderColor = (type: string) => {
       switch (type) {
         case 'success':
-          return '#388e3c'
+          return '#388e3c';
         case 'error':
-          return '#d32f2f'
+          return '#d32f2f';
         case 'warning':
-          return '#ffab00'
+          return '#ffab00';
         case 'info':
-          return '#0091ea'
+          return '#0091ea';
         default:
-          return '#2F2F2F'
+          return '#2F2F2F';
       }
-    }
+    };
     toast[notiType](message, {
       position: 'top-right',
       autoClose: 3000,
@@ -33,10 +30,10 @@ const useNoti = () => {
         fontSize: '15px',
         color: renderColor(notiType),
       },
-    })
-  }
+    });
+  };
 
-  return [pushNoti] as const
-}
+  return [pushNoti] as const;
+};
 
-export default useNoti
+export default useNoti;

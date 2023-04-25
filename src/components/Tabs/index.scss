@@ -1,0 +1,125 @@
+.et-tab-list {
+  min-height: 40px !important;
+  .MuiTabs-scroller {
+    align-items: center;
+  }
+  &.toggle {
+    display: inline-flex;
+    background-color: white;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    .et-tab-item {
+      z-index: 1;
+      height: 40px;
+      border-radius: 6px;
+      @apply tw-et-text-label-14 tw-text-ink-60 tw-stroke-ink-60;
+      &.MuiButtonBase-root {
+        min-height: 42px;
+        min-width: 42px;
+        padding: 0 16px 0 16px;
+      }
+      &.Mui-selected {
+        color: white;
+        stroke: white;
+        transition: color 0.2s, ease 0.5s;
+      }
+    }
+    & .MuiTabs-indicator {
+      z-index: 0;
+      @apply tw-et-text-label-14 tw-bg-primary-light tw-text-white;
+      border-radius: 6px;
+      height: 42px;
+      top: 0;
+    }
+  }
+  &:not(.toggle) {
+    &.menu {
+      .et-tab-item {
+        z-index: 1;
+        min-width: 137px;
+        height: 40px;
+        border-radius: 0 !important;
+        @apply tw-et-text-description-16 tw-font-bold;
+        &.MuiButtonBase-root {
+          min-height: 40px;
+        }
+        &.Mui-selected {
+          color: white;
+          transition: color 0.2s, ease 0.5s;
+          @apply tw-text-secondary-light;
+        }
+        //&:hover:not(:active){
+        &:hover {
+          &:not(.Mui-selected) {
+            transition: color 0.2s, ease 0.3s;
+          }
+        }
+      }
+      & .MuiTabs-indicator {
+        z-index: 0 !important;
+        @apply tw-et-text-description-16 tw-font-bold tw-bg-secondary-light;
+        box-shadow: 0 4px 12px rgba(111, 125, 145, 0.16) !important;
+        border-radius: 0 !important;
+        height: 1.5px !important;
+      }
+    }
+    .et-tab-item {
+      z-index: 1;
+      min-width: 137px;
+      height: 40px;
+      border-radius: 1000px;
+      @apply tw-et-text-description-16 tw-font-bold;
+      &.MuiButtonBase-root {
+        min-height: 40px;
+      }
+      &.Mui-selected {
+        color: white;
+        transition: color 0.2s, ease 0.5s;
+      }
+      //&:hover:not(:active){
+      &:hover {
+        &:not(.Mui-selected) {
+          transition: color 0.2s, ease 0.3s;
+          @apply tw-bg-ink-10;
+        }
+      }
+    }
+    & .MuiTabs-indicator {
+      z-index: 0;
+      @apply tw-et-text-description-16 tw-font-bold tw-bg-secondary-light;
+      box-shadow: 0 4px 12px rgba(111, 125, 145, 0.16);
+      border-radius: 1000px;
+      height: 40px;
+    }
+  }
+  .et-tab-item {
+    &.MuiTab-root {
+      text-transform: none;
+    }
+    &:hover {
+      color: color('ink-60') !important;
+    }
+  }
+  .et-tab-item + .et-tab-item {
+    margin-left: 10px;
+  }
+  &.responsive {
+    @apply et-card;
+  }
+}
+@screen max_xl {
+  .et-tab-list {
+    &.responsive {
+      .et-tab-item {
+        *:nth-last-child(1) {
+          font-size: 0 !important;
+        }
+        em {
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import logo from '@/logo.svg';
 import { useTranslation } from 'react-i18next';
+import UniconIcon from '../UniconIcon';
 
 const Hello = () => {
   const { t } = useTranslation(['common']);
@@ -12,6 +13,7 @@ const Hello = () => {
         <li>📖 TypeScript</li>
         <li>🔨 Eslint</li>
         <li>💅 Prettier</li>
+        <UniconIcon name='airplay' />
       </ul>
       <p>{t('INSTALL')}</p>
     </div>

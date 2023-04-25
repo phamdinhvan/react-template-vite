@@ -26,6 +26,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["vite.config.ts", "**/*.ts", "**/*.tsx", "i18n.ts"],
+  "include": ["vite.config.ts", "**/*.ts", "**/*.tsx", "src/i18n/index.ts"],
   "exclude": ["node_modules"]
 }

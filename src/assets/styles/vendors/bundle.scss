@@ -1,0 +1,12 @@
+///////////////////////////////////////////////////
+///        INCLUDED THIRD-PARTY VENDORS         ///
+///////////////////////////////////////////////////
+
+@import 'unicons/unicons';
+@import 'icomoon/icomoon';
+
+// Include Simplebar
+@import 'simplebar';
+.simplebar-scroll-content {
+  @extend .simplebar-content-wrapper;
+}

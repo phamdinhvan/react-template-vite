@@ -1,5 +1,5 @@
 import Hello from '@/components/Hello';
-import '../i18n';
+import './i18n';
 
 const MainApp = () => {
   return <Hello />;

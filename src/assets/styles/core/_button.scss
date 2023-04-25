@@ -1,0 +1,296 @@
+//CUSTOMIZE THE COLOR TO MATCH THE SYSTEM DESIGN
+
+@mixin btn-font-style($weight: 400) {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $weight;
+  font-family: 'Nunito Sans';
+}
+
+@mixin base-btn {
+  border: 0;
+  cursor: pointer;
+}
+
+$btn: btn-confirm, btn-remove, btn-cancel;
+@each $btn-style in $btn {
+  .#{$btn-style}-style {
+    @include btn-font-style(bold);
+    outline: none;
+    background: $white;
+    padding: 12px 60px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+
+    @if $btn-style == btn-confirm {
+      color: $white;
+      background: #08c4e3;
+      border: 0;
+      @extend .btn--shiny;
+    } @else if $btn-style == btn-remove {
+      color: #f84948;
+      border: 1px solid #e53935;
+      box-sizing: border-box;
+      border: 1px solid #e53935;
+      background: $white;
+    } @else {
+      background: $white;
+      color: var(--primary-gray-3);
+      border: 0;
+    }
+  }
+}
+
+.btn-white {
+  padding: 1rem 1.3rem;
+  background: $white;
+  color: var(--primary-gray-3);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  border: 0;
+  border-radius: 0.4rem;
+  filter: drop-shadow(0px 4px 12px rgba(111, 125, 145, 0.16));
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-gray {
+  padding: 1.2rem 1.8rem;
+  background: var(--primary-gray-1);
+  color: var(--primary-gray-3);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  border: 0;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-icon {
+  @include base-btn();
+  background: $white;
+  border-radius: 0.4rem;
+  color: $white;
+  padding: 10px;
+  outline: none;
+}
+
+.btn-icon[aria-selected='true'] {
+  background: var(--primary-green);
+}
+
+$btn-styles: btn-white, btn-green;
+@each $btn-style in $btn-styles {
+  .#{$btn-style}-style {
+    font-weight: bold !important;
+    font-size: 1.6rem !important;
+    line-height: 2.4rem !important;
+
+    padding-right: 2rem;
+    .MuiOutlinedInput-input {
+      padding: 1.2rem 3.6rem;
+    }
+    .MuiSvgIcon-root {
+      font-size: 2.6rem;
+    }
+    @if $btn-style == btn-white {
+      background: $white;
+      color: #444c53 !important;
+      .MuiSvgIcon-root {
+        color: #444c53;
+      }
+    } @else {
+      background: var(--primary-green);
+      color: $white !important;
+      .MuiSvgIcon-root {
+        color: $white;
+      }
+    }
+  }
+}
+
+.select-menu-list {
+  .MuiList-root {
+    padding: 0 !important;
+  }
+  .MuiMenuItem-root {
+    &:hover {
+      background: #f9fbff !important;
+    }
+  }
+}
+
+.floating-btn-item {
+  position: absolute;
+  bottom: 3.2rem;
+  right: 5.2rem;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: rtl;
+  background: var(--primary-green);
+  border-radius: 50%;
+  padding: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-excel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.8rem;
+  margin-left: 2rem;
+  @extend .btn-cancel-style;
+  width: fit-content !important;
+  padding: 1rem 1.4rem;
+  img {
+    margin-right: 1rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    object-fit: contain;
+  }
+  &:hover {
+    @extend .btn--shadow;
+  }
+}
+
+.btn-cancel-border {
+  @extend .btn-cancel-style;
+  border: 1px solid #272b2f;
+}
+
+.btn-confirm-secondary {
+  @extend .btn-confirm-style;
+  background-color: #10bed2;
+}
+
+// button custom hover
+
+.btn {
+  width: inherit;
+  height: 46px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 6px;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-appearance: button;
+  position: relative;
+  cursor: pointer;
+  transition: all 250ms ease 0ms;
+  color: #fff;
+  font-size: 1.6rem;
+  &:active {
+    -webkit-box-shadow: 0 0 11px 1px gray;
+    -moz-box-shadow: 0 0 11px 1px gray;
+    box-shadow: 0 0 11px 1px gray;
+  }
+  &--hover:hover {
+    border: 1px solid #2d3742;
+  }
+  &--transparent {
+    border: 1px solid transparent;
+    background-image: none;
+    background-color: transparent;
+    outline: none;
+  }
+  &--shiny {
+    position: relative;
+    &:hover {
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(33%, transparent),
+        color-stop(50%, rgba(255, 255, 255, 0.3)),
+        color-stop(66%, transparent)
+      );
+      background-image: -o-linear-gradient(
+        left,
+        transparent 33%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 66%
+      );
+      background-image: linear-gradient(
+        to right,
+        transparent 33%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 66%
+      );
+      background-size: 300% 100%;
+      -webkit-animation: shine 1s 1;
+      animation: shine 1s 1;
+    }
+  }
+
+  &--shadow {
+    -webkit-box-shadow: 0 0.4rem 1.6rem rgba(66, 78, 87, 0.16);
+    -moz-box-shadow: 0 0.4rem 1.6rem rgba(66, 78, 87, 0.16);
+    box-shadow: 0 0.4rem 1.6rem rgba(66, 78, 87, 0.16);
+  }
+  &--opacity {
+    opacity: 0.5;
+  }
+  &--disabled {
+    background-color: #ebecf0 !important;
+    cursor: not-allowed !important;
+  }
+
+  &--active {
+    background-color: #ebecf0 !important;
+  }
+  &__circle {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+  }
+  &__square {
+    width: 4.8rem;
+  }
+
+  &__oval {
+    border-radius: 3.2rem;
+  }
+  &__text-cancel {
+    &:hover {
+      color: #b8292f;
+    }
+  }
+  &-notification {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.4rem;
+    right: -0.4rem;
+    background: transparent;
+    &.topLeft {
+      left: -0.4rem;
+    }
+    &.topRight {
+      right: -0.4rem;
+    }
+    &.blue {
+      background: #08c4e3;
+    }
+  }
+
+  @-webkit-keyframes shine {
+    0% {
+      background-position: right;
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: right;
+    }
+  }
+}

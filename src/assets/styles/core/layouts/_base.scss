@@ -1,0 +1,71 @@
+.et{
+  &-app{
+    &-root{
+      outline: none;
+    }
+  }
+  &-main{
+    position: relative;
+  }
+  &-wrap{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: color('ink-10');
+  }
+  &-content{
+    outline: none;
+    &-floating{
+      position: fixed;
+      z-index: 10;
+      bottom: 2vh;
+      right: 52px;
+    }
+    &-header-menu{
+      z-index: 5;
+      position: fixed;
+      display: flex;
+      align-items: center;
+      border: 0 !important;
+      max-height: $header-height;
+      transition: transform 0.4s;
+      box-shadow: $card-box-shadow;
+      &.scroll-up{
+        position: fixed !important;
+        //top: $header-height;
+        //margin-bottom: $header-height;
+        transform: none;
+      }
+      &.scroll-down{
+        //position: relative !important;
+        transform: translate3d(0%, -100%, 0);
+        //transform: translateY(-100%);
+      }
+    }
+    &-header-menu + div{
+      margin-top: $header-height !important;
+    }
+    &-body{
+      z-index: 4;
+      margin-left: 24px;
+      margin-right: 24px;
+      padding-bottom: 10px;
+      &.no-padding{
+        margin: 0;
+        padding: 0;
+      }
+      &:has(.et-content-floating){
+        //margin-bottom: 40px;
+      }
+    }
+    &-fs{
+      min-height: calc(100vh - (#{$header-height} + #{$header-height}));
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.et-padding-header{
+  margin-top: -1 * $header-height;
+}

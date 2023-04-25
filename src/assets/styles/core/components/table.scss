@@ -1,0 +1,5 @@
+.MuiPaper-root{
+  &:has(.MuiTableContainer-root){
+    box-shadow: $card-box-shadow !important;
+  }
+}

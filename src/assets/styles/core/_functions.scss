@@ -1,0 +1,13 @@
+@use "sass:math";
+
+@function color($key: "blue") {
+    @return map-get($base-colors, $key);
+}
+
+@function pxToRem($size) {
+    @return math.div($size,16) * 1rem;
+}
+
+@function pxToEm($size) {
+    @return $size * 0.0625em;
+}

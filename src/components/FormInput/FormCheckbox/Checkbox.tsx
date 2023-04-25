@@ -67,7 +67,7 @@ const FormCheckBox = <TFieldValues extends FieldValues = FieldValues>({
           return (
             <FormControlLabel
               label={label}
-              className={clsx('tw-et-text-label-14')}
+              className={clsx('tw-et-example')}
               control={
                 <>
                   <Checkbox

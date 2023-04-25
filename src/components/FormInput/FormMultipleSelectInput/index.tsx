@@ -88,7 +88,7 @@ const FormMultipleSelectInput = <TFieldValues extends FieldValues = FieldValues>
                   onKeyDown={(event) => event.stopPropagation()}
                 />
                 <div className='tw-flex tw-items-center tw-justify-between'>
-                  <div className='tw-et-text-paragraph-16 tw-text-primary-light'>Chọn tất cả</div>
+                  <div className='tw-et-example tw-text-primary-light'>Chọn tất cả</div>
                   <Checkbox
                     sx={{
                       '& .MuiSvgIcon-root': {
@@ -110,7 +110,7 @@ const FormMultipleSelectInput = <TFieldValues extends FieldValues = FieldValues>
                 return (
                   <MenuItem key={index} value={type.label}>
                     <ListItemText
-                      className='tw-et-text-paragraph-16 tw-text-primary-light'
+                      className='tw-et-example tw-text-primary-light'
                       primary={type.label || TEXT_HOLDER}
                     />
                     <Checkbox
@@ -141,7 +141,7 @@ const FormMultipleSelectInput = <TFieldValues extends FieldValues = FieldValues>
       />
 
       {error && (
-        <FormHelperText className='tw-et-text-paragraph-14 !tw-text-[#f84948] !tw-ml-0 !tw-mt-[11px]'>
+        <FormHelperText className='tw-et-example !tw-text-[#f84948] !tw-ml-0 !tw-mt-[11px]'>
           {error.message}
         </FormHelperText>
       )}

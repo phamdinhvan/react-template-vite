@@ -1,0 +1,21 @@
+.MuiPopper-root{
+  .MuiPaper-root{
+    box-shadow: 0 1px 10px #00000040 !important;
+  }
+}
+
+.MuiCheckbox-root {
+ &.Mui-checked {
+   &.tw-bg-primary-light
+   svg {
+     fill: color('primary-light');
+   }
+ }
+}
+.MuiCheckbox-root {
+  &.Mui-disabled{
+    svg {
+      fill: color('ink-20');
+    }
+  }
+}

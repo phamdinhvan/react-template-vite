@@ -1,0 +1,110 @@
+//////////////////////////////////////////
+///        DEFINE APP VARIABLES        ///
+//////////////////////////////////////////
+
+@use 'sass:math';
+
+$font-url: '/src/assets/fonts';
+$white: #fff;
+$black: #000;
+
+$base-color: #364a63;
+
+$base-colors: (
+  'primary-light': #00529c,
+  'primary-dark': #003565,
+  'primary-80': #136dbe,
+  'primary-60': #2886db,
+  'primary-40': #57adfc,
+  'primary-20': #8bc8ff,
+  'primary-10': #b1daff,
+  'primary-5': #d8ecff,
+  'secondary-light': #10bed2,
+  'secondary-dark': #098b9a,
+  'secondary-80': #3ed3e4,
+  'secondary-60': #50e3f3,
+  'secondary-40': #89f3ff,
+  'secondary-20': #c1f9ff,
+  'secondary-10': #d6fbff,
+  'secondary-5': #effdff,
+  'ink-light': #272b2f,
+  'ink-80': #525560,
+  'ink-60': #6c778d,
+  'ink-40': #adacac,
+  'ink-20': #e0e6f0,
+  /* :) */ 'ink-10': #f0f3f8,
+  'ink-5': #f9fbff,
+  'error-bg': #ffdcdc,
+  'error-dark': #e93c3c,
+);
+
+$border-input-radius: 4px;
+
+/// Z-INDEX //////////
+$z-popup: 5000;
+$z-drawer: 4000;
+
+$test-color: color('secondary-light');
+
+/// CARDS ///////////
+$card-box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.02), 0px 0px 20px rgba(76, 87, 125, 0.02);
+
+/// LOGO ///////////
+$logo-height: 36px;
+$logo-height-sm: 28px;
+$logo-height-lg: 60px;
+$logo-height-icon: 33px;
+
+/// HEADERS ///////////
+$header-height: 64px;
+$header-main-gap-x: 10px;
+$header-main-gap-x-sm: 10px;
+
+$header-bg-color: #00529c;
+$header-bg-dark-color: #00529c;
+
+//$header-border-dark-bottom: lighten($header-bg-dark-color, 10%);
+$header-border-dark-bottom: $header-bg-dark-color;
+$header-bg-theme-color: $header-bg-color;
+$header-border-theme-bottom: $header-bg-color;
+
+/// SIDE MENU ///////////
+$sidebar-width-normal: 200px;
+$sidebar-width-compact: 64px;
+$sidebar-gap-x: 0.75rem;
+
+$sidebar-bg-color: #f5f6fa;
+$sidebar-border-color: #e5e9f2;
+
+$sidebar-bg-light-color: $white;
+$sidebar-border-light-color: #ebeef2;
+
+$sidebar-bg-dark-color: #00529c;
+//lighten(var(--tw-text-black), 10%);
+
+$sidebar-bg-theme-color: var(--tw-text-black);
+$sidebar-border-theme-color: var(--tw-text-black);
+
+$sidebar-transition-duration: 450ms;
+$sidebar-transition-name: ease;
+$sidebar-overlay: var(--tw-text-black);
+
+$menu-icon-width: 2.25rem;
+$menu-icon-width-sm: 2rem;
+
+//  CONFIGURATION VARIABLE  //////
+$dark_option: true;
+$dark_theme_option: true;
+/////////////////////////////////////////
+///    THIRD-PARTY VARIABLE    //////////
+/////////////////////////////////////////
+///
+$et-icon-font: 'unicons-line';
+$et-font-url: '/src/assets/fonts';
+
+@import '../vendors/unicons/variables';
+@import '../vendors/icomoon/variables';
+
+$icon-arrow-family: 'icomoon';
+$icon-arrow-down: $icomoon-caret-down-fill;
+$icon-arrow-right: $icomoon-caret-right-fill;

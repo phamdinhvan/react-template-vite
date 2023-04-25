@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Included Global Variables and Functions
+@import 'core/variables';
+@import 'core/functions';
+
+:root,
+#root {
+  @each $name, $color in $base-colors {
+    --color-#{$name}: #{$color};
+  }
+}
+@import 'vendors/bundle';
+@layer base {
+  // Included Fonts
+  /** 01. FONTS */
+
+  @import 'core/typography';
+
+  @import 'core/app';
+
+  //  PLUGINS
+  @import 'plugins/plugin-skeleton';
+
+  // Include Other Vendors
+  @import 'core/button';
+  @import 'core/textfield';
+}
+
+@layer components {
+  // Include Core Style
+  @import 'core/style';
+
+  @import 'core/preview';
+
+  @import 'core/misc';
+}
+
+@layer utilities {
+}

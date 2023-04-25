@@ -1,0 +1,13 @@
+.box-preview{
+  background-color: $white;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #E0E6F0;
+  &.transparent{
+    background-color: transparent;
+    border: 0;
+  }
+  &.no-padding{
+    padding: 0;
+  }
+}

@@ -1,0 +1,203 @@
+//CUSTOMIZE THE COLOR TO MATCH THE SYSTEM DESIGN
+
+$border-styles: search-border, search;
+@each $border-style in $border-styles {
+  .#{$border-style}-style {
+    background: var(--primary-white);
+    height: 4.8rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0rem 1rem 3rem rgba(146, 151, 163, 0.2);
+    width: 100%;
+    border-radius: 0.4rem;
+    .input {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      padding: 1.2rem !important;
+      height: 2.4rem;
+    }
+    @if $border-style == search {
+      .MuiOutlinedInput-notchedOutline {
+        border: 0;
+      }
+    }
+  }
+}
+.form-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .form-label {
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--primary-gray-3);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.8rem;
+  }
+}
+.form-autocomplete-select-field {
+  width: 100%;
+  .MuiOutlinedInput-root {
+    padding: 0 9px 0 9px !important;
+    height: auto !important;
+  }
+  .MuiAutocomplete-input {
+    padding: 0 !important;
+    font-family: 'Nunito Sans Regular' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+}
+//override style autocomplete paper
+.MuiAutocomplete-paper {
+  padding: 0 !important;
+  @apply tw-et-example;
+}
+.form-text-field {
+  width: 100%;
+  background-color: white;
+  border-radius: $border-input-radius;
+  svg {
+    @apply tw-stroke-slate-400;
+  }
+  &.style-outline {
+    border: 0 !important;
+    box-shadow: 0px 5px 19px rgba(146, 151, 163, 0.1);
+    svg {
+      @apply tw-stroke-slate-300;
+    }
+    .MuiOutlinedInput-notchedOutline {
+      border: 0;
+    }
+  }
+  &.large .MuiInputBase-root {
+    height: 56px !important;
+    & input {
+      @apply tw-et-example;
+    }
+  }
+  &.large {
+    a.search-btn-clear {
+      width: 80px !important;
+      height: 40px !important;
+    }
+  }
+  &.medium .MuiInputBase-root {
+    height: 48px !important;
+    & input {
+      @apply tw-et-example;
+    }
+  }
+  &.medium {
+    a.search-btn-clear {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
+  &.small .MuiInputBase-root {
+    height: 36px !important;
+    & input {
+      @apply tw-et-example;
+    }
+    padding-left: 10.12px;
+  }
+  &.small {
+    a.search-btn-clear {
+      width: 30px !important;
+      height: 30px !important;
+    }
+  }
+  &.has-rule {
+    padding-bottom: 30px;
+  }
+  .MuiInputBase-root {
+    .input {
+      font-size: 16px;
+      padding: 0 16px;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+  .MuiFormHelperText-root {
+    position: absolute;
+    bottom: 0;
+  }
+  .search-form {
+    position: absolute;
+  }
+  .search-btn {
+    position: absolute;
+    right: 5px;
+  }
+  a.search-btn-clear {
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: color('ink-20');
+    }
+  }
+}
+.form-text-select-field {
+  width: 100%;
+  .MuiOutlinedInput-root {
+    height: 36px !important;
+  }
+  .MuiInputBase-root {
+    .input {
+      font-size: 16px;
+      padding: 0 16px;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+  .MuiFormHelperText-root {
+    position: absolute;
+    bottom: 0;
+  }
+}
+.form-select-field {
+  height: 48px;
+  .MuiSelect-select {
+    font-size: 16px !important;
+    min-height: auto !important;
+  }
+}
+.MuiInput-underline {
+  &::after {
+    border-bottom: 0.2rem solid #0a6836 !important;
+  }
+}
+.form-helper-text {
+  &.Mui-error {
+    color: #f84948 !important;
+    padding: 0;
+    margin-left: 0 !important;
+    @apply tw-et-example;
+  }
+}
+
+/*textfield type number material ui hide arrows button*/
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

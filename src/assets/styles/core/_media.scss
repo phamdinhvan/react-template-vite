@@ -1,0 +1,94 @@
+$xs: 320px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;
+
+$designDimension: 1440px;
+
+// ant breakpoint
+/*
+  xs: 0 -> 575
+  sm: 576 -> 767
+  md: 768 -> 991
+  lg: 992 -> 1199
+  xl: 1200 -> 1599
+  xxl: 1600 -> ...
+*/
+
+@mixin from0_575 {
+  @media (max-width: #{$sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin from576_ {
+  @media (min-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin from768_ {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin from992_ {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin from1200_ {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin from1440_ {
+  @media (min-width: #{$designDimension}) {
+    @content;
+  }
+}
+
+@mixin from1660_ {
+  @media (min-width: #{$xxl}) {
+    @content;
+  }
+}
+
+@mixin max1440_ {
+  @media (max-width: #{$designDimension}) {
+    @content;
+  }
+}
+
+@mixin to1600_ {
+  @media (max-width: #{$xxl}) {
+    @content;
+  }
+}
+
+@mixin to1200_ {
+  @media (max-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin to992_ {
+  @media (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin to667_ {
+  @media (max-height: 640px) {
+    @content;
+  }
+}
+
+// @function responsiveInRange($maximunViewportWidth, $minimunViewportWidth, $maximunRem, $minimunRem) {
+//   @return calc(2.4rem + (240 - 24) * ((100vw - 32rem) / (1440 - 320)));
+// }

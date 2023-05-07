@@ -13,7 +13,7 @@ const Hello = () => {
         <li>📖 TypeScript</li>
         <li>🔨 Eslint</li>
         <li>💅 Prettier</li>
-        <UniconIcon name='airplay' />
+        <UniconIcon name='search' />
       </ul>
       <p>{t('INSTALL')}</p>
     </div>

@@ -7,7 +7,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(props,
   return <MuiAlert elevation={0} ref={ref} variant='filled' {...props} />;
 });
 
-export const AlertMessage: React.FC<any> = ({ severity = 'success', icon, ...props }) => {
+const AlertMessage: React.FC<any> = ({ severity = 'success', icon, ...props }) => {
   const [open, setOpen] = React.useState(props.open || true);
   let sx = {};
   if (severity == 'error') {
@@ -40,3 +40,5 @@ export const AlertMessage: React.FC<any> = ({ severity = 'success', icon, ...pro
     </>
   );
 };
+
+export default AlertMessage;

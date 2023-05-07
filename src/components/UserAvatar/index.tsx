@@ -4,7 +4,7 @@ import Avatar from '@mui/material/Avatar';
 import { stringAvatar } from '@/utils';
 
 // Aviable sizes {xs,sm,md,lg,xl}
-export const UserAvatar: React.FC<any> = ({ className, size = 'xs', ...props }) => {
+const UserAvatar: React.FC<any> = ({ className, size = 'xs', ...props }) => {
   const blockClass = clsx('user-avatar tw-bg-clip-content', {
     [`user-avatar-${size}`]: size,
     [`${className}`]: className,
@@ -16,3 +16,5 @@ export const UserAvatar: React.FC<any> = ({ className, size = 'xs', ...props }) 
     </Avatar>
   );
 };
+
+export default UserAvatar;

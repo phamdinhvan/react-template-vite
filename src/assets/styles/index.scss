@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 // Included Global Variables and Functions
-@import 'core/variables';
+@import 'variables';
 @import 'core/functions';
 
 :root,
@@ -19,7 +19,7 @@
 
   @import 'core/typography';
 
-  @import 'core/app';
+  @import 'app';
 
   //  PLUGINS
   @import 'plugins/plugin-skeleton';

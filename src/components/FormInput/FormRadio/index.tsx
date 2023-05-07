@@ -72,7 +72,7 @@ const CheckedIcon = styled(Icon)({
   },
 });
 
-const FormCheckBoxGroup: FC<CheckboxGroupProps> = ({
+const FormRadio: FC<CheckboxGroupProps> = ({
   label,
   row = false,
   data,
@@ -117,4 +117,4 @@ const FormCheckBoxGroup: FC<CheckboxGroupProps> = ({
   );
 };
 
-export default FormCheckBoxGroup;
+export default FormRadio;

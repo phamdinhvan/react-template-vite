@@ -22,7 +22,14 @@ type P_Props = {
   onSave: (...args: any) => void;
 };
 
-const Filter: React.FC<P_Props> = ({ dataFilter, onSave, open, onClose, title, checkAllTitle }) => {
+const CustomFilter: React.FC<P_Props> = ({
+  dataFilter,
+  onSave,
+  open,
+  onClose,
+  title,
+  checkAllTitle,
+}) => {
   const [checkboxStates, setCheckboxStates] = useState<boolean[][]>(
     dataFilter.map((data) => data.checkboxes.map(() => false)),
   );
@@ -123,4 +130,4 @@ const Filter: React.FC<P_Props> = ({ dataFilter, onSave, open, onClose, title, c
   );
 };
 
-export default Filter;
+export default CustomFilter;

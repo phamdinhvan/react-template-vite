@@ -1,7 +1,7 @@
 import { IconModel } from '@/models';
 import React from 'react';
 
-export const SvgCommon: React.FC<IconModel> = (props) => {
+const SvgCommon: React.FC<IconModel> = (props) => {
   return (
     <svg
       width={props.size[0]}
@@ -16,3 +16,5 @@ export const SvgCommon: React.FC<IconModel> = (props) => {
     </svg>
   );
 };
+
+export default SvgCommon;

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-//import Icon from '@/components/Icons/UniconIcon'
-import FeatureSettings from '@/assets/icons/menu/feature-settings.svg';
+import FeatureSettings from '@/assets/icons/settings.svg';
 import { ETSVG } from '@/components/Svg/ETSVG';
 
 interface Props {
-  collapseSidebar: any;
+  collapseSidebar?: any;
   setTheme: any;
 }
 
@@ -19,6 +18,7 @@ const SidebarFooter: React.FC<Props> = ({ collapseSidebar, setTheme }) => {
       setChecked(getTheme === 'white' ? false : true);
       setTheme(getTheme);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getTheme]);
 
   return (
@@ -39,6 +39,11 @@ const SidebarFooter: React.FC<Props> = ({ collapseSidebar, setTheme }) => {
           Cài đặt
         </span>
       </Link>
+      {/* {!collapseSidebar && (
+        <span className='tw-et-text-paragraph-12 tw-text-[#AFCDEA] tw-line-clamp-1'>
+         Version 1.1
+        </span>
+      )} */}
     </div>
   );
 };

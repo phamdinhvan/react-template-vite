@@ -1,8 +1,8 @@
+import UniconIcon from '@/components/UniconIcon';
 import logo from '@/logo.svg';
 import { useTranslation } from 'react-i18next';
-import UniconIcon from '../UniconIcon';
 
-const Hello = () => {
+const Home = () => {
   const { t } = useTranslation(['common']);
   return (
     <div className='tw-flex tw-flex-col tw-items-center tw-justify-center tw-text-center tw-pt-[50px]'>
@@ -20,4 +20,4 @@ const Hello = () => {
   );
 };
 
-export default Hello;
+export default Home;

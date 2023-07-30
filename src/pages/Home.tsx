@@ -1,6 +1,8 @@
 import UniconIcon from '@/components/UniconIcon';
 import logo from '@/logo.svg';
 import { useTranslation } from 'react-i18next';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Image from '@/assets/images/test.png';
 
 const Home = () => {
   const { t } = useTranslation(['common']);
@@ -14,6 +16,7 @@ const Home = () => {
         <li>🔨 Eslint</li>
         <li>💅 Prettier</li>
         <UniconIcon name='search' />
+        <LazyLoadImage src={Image} alt='#' />
       </ul>
       <p>{t('INSTALL')}</p>
     </div>

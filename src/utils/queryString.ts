@@ -3,6 +3,7 @@ import URLSearchParams from 'url-search-params';
 import qs from 'qs';
 
 const removeQuestionMark = (str: string) => {
+  // eslint-disable-next-line no-constant-condition
   while (true) {
     if (str.charAt(0) !== '?') {
       break;
@@ -15,6 +16,7 @@ const removeQuestionMark = (str: string) => {
 export const objectToQueryString = (parameter: any) => {
   const str = [];
   for (const p in parameter) {
+    // eslint-disable-next-line no-prototype-builtins
     if (parameter.hasOwnProperty(p)) {
       const value = parameter[p];
       const encodedKey = encodeURIComponent(p);
@@ -28,10 +30,6 @@ export const objectToQueryString = (parameter: any) => {
     }
   }
   return '?' + str.join('&');
-};
-
-export const useQuery = () => {
-  return new URLSearchParams(useLocation().search);
 };
 
 export const cleanObject = (obj: any) => {

@@ -104,3 +104,6 @@ Import your translate language to public/locales
 # State managerment
 Using react query for manage database and using as a basic state managerment
 Use redux toolkit for more complex state
+
+# Image optimize
+using react-lazy-load-image-component for optimize image

@@ -48,29 +48,17 @@ https://iconscout.com/unicons/explore/line
 # Structure
 
 assets => declare images, icons, styling...
-
 components => declare common components controlled/uncontrolled
-
 constant => declare constant variables
-
 contexts => declare contexts
-
 pages => declare pages in app
-
 hooks => declare custom hook
-
 i18n => multiple languages
-
 models => declare type model
-
 layouts => declare layout in app
-
 services => declare api request
-
 utils => declare some configs(axios,...) and some common funtion
-
 routes => declare routing app and routing request
-
 stores => declare state managerment
 
 # Styling
@@ -108,3 +96,11 @@ Trường hợp 1 số scss sẽ nằm ở tsx component, nên sẽ ko cần cá
 │ │ ├── react-datatable
 │ │ └── ...
 └── ...
+
+# Mutiple language
+Using i18next
+Import your translate language to public/locales
+
+# State managerment
+Using react query for manage database and using as a basic state managerment
+Use redux toolkit for more complex state
